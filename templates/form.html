@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Генератор визиток</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Создание визитки</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label>Имя: <input type="text" name="name" required></label>
+            <label>Email: <input type="email" name="email" required></label>
+            <label>Телефон: <input type="text" name="phone" required></label>
+            <label>Род деятельности: <input type="text" name="job" required></label>
+            <label>Фото (.png, .jpeg, .jpg): <input type="file" name="photo" required></label>
+            <button type="submit" onclick="showSpinner()">Сгенерировать мою визитку</button>
+            <div id="spinner" class="spinner"></div>
+
+        </form>
+    </div>
+
+    <style>
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #ccc;
+            border-top: 4px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-top: 10px;
+            margin-left: auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <script>
+        function showSpinner() {
+            document.getElementById('spinner').style.display = 'block';
+
+            // Пример асинхронной загрузки
+            setTimeout(() => {
+                document.getElementById('spinner').style.display = 'none';
+                // alert('Готово!');
+            }, 1000000); // 3 секунды "загрузки"
+        }
+    </script>
+
+</body>
+
+</html>

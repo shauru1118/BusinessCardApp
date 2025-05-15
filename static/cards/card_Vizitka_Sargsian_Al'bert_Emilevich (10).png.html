@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Ваша визитка</title>
+  <!-- <link rel="stylesheet" href="/static/style.css"> -->
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff00;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    .container,
+    .card {
+      background: rgb(255, 255, 255);
+      padding: 20px;
+      /* border-radius: 10px; */
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 450px;
+      height: 230px;
+      background-color: transparent;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAElBMVEX////CNykGG3kAAGwAGH7LOR9TMMkKAAAA9UlEQVR4nO3QsQGAQAwAoejr/ivb50pbGIEZAAAAAAAAAAAAAAAAAAAAAH47bHOzOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJzUP27xsc7E5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aQ+2jLMGymKnQ8AAAAASUVORK5CYII=");
+      background-size: cover;
+      /* Растягивает */
+      background-position: center;
+      /* Центрирует */
+      background-repeat: no-repeat;
+      /* Не повторяет */
+    }
+
+    .card .info {
+      width: 60%;
+    }
+
+    .card .photo img {
+      max-width: 150px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+    }
+
+    button {
+      margin-top: 25px;
+      /* margin-left: 67%; */
+      padding: 10px 10px;
+      background: #37ff00a5;
+      border-radius: 1em;
+      width: 15em;
+      cursor: pointer;
+      transform: rotate(45);
+    }
+
+    button:hover {
+      background: #00c210;
+      /* color: #fff; */
+      transition: all 0.5s;
+    }
+  </style>
+  <div class="card">
+    <div class="info">
+      <h2>Альберт</h2> <h2>Саргсян Эмилевич</h2>
+      <p><strong>Email:</strong> sargsyan_ae09@mail.ru</p>
+      <p><strong>Телефон:</strong> 89102743900</p>
+      <p><strong>Деятельность:</strong> Программист</p>
+    </div>
+    <div class="photo">
+      <img src="file://D:\GitHub\BusinessCardApp\static\photoes\Vizitka_Sargsian_Al&#39;bert_Emilevich (10).png" alt="file://D:\GitHub\BusinessCardApp\static\photoes\Vizitka_Sargsian_Al&#39;bert_Emilevich (10).png">
+    </div>
+  </div>
+  <br>
+
+</body>
+
+</html>

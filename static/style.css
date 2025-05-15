@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #00ff227e;
+  padding: 30px;
+}
+
+.container,
+.card {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .info {
+  width: 60%;
+}
+
+.card .photo img {
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 15px;
+  margin-left: 67%;
+  padding: 10px 10px;
+  background: #37ff00a5;
+  border-radius: 1em;
+  width: 15em;
+  cursor: pointer;
+  transform: rotate(45);
+}
+
+button:hover {
+  background: #00c210;
+  /* color: #fff; */
+  transition: all 0.5s;
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Ваша визитка</title>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #00ff227e;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 450px;
+      height: 230px;
+      background-color: transparent;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url("/static/flag.png");
+      background-size: cover;
+      /* Растягивает */
+      background-position: center;
+      /* Центрирует */
+      background-repeat: no-repeat;
+      /* Не повторяет */
+    }
+
+    .container,
+    .card {
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+
+
+    .card .info {
+      width: 60%;
+    }
+
+    .card .photo img {
+      max-width: 150px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      /* В колонку */
+      align-items: center;
+      /* По центру */
+      gap: 0.2em;
+      /* Расстояние между кнопками */
+    }
+
+    button {
+      margin-top: 25px;
+      /* margin-left: 67%; */
+      padding: 10px 10px;
+      background: #37ff00a5;
+      border-radius: 1em;
+      width: 15em;
+      cursor: pointer;
+      transform: rotate(45);
+    }
+
+    button:hover {
+      background: #00c210;
+      /* color: #fff; */
+      transition: all 0.5s;
+    }
+  </style>
+  <div class="card">
+    <div class="info">
+      <h2>{{ name }}</h2>
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Телефон:</strong> {{ phone }}</p>
+      <p><strong>Деятельность:</strong> {{ job }}</p>
+    </div>
+    <div class="photo">
+      <img src="{{ photo }}" alt="{{ photo }}">
+    </div>
+  </div>
+  <br>
+  <div class="btn">
+    <a href="{{ download_url }}">
+      <button>Скачать визитку</button>
+    </a>
+    <button onclick="history.back()">Назад</button>
+  </div>
+</body>
+
+</html>
